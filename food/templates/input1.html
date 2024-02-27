@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'input1.css'%}">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet'>
+
+</head>
+<body>
+  <div class="wrapper">
+    <form action="" method="post">
+      {% csrf_token %}
+      <h1>
+        <img src="https://cdn-icons-png.flaticon.com/512/3570/3570168.png" alt="Delivery Icon" class="delivery-icon">
+        Food Delivery
+      </h1>
+      <div class="input-box">
+        <input type="text" id="zone" name="zone" placeholder="Zone" required>
+        <i class="fa-solid fa-map-location-dot"></i>
+      </div>
+      <div class="input-box">
+        <input type="text" id="organization_id" name="organization_id" placeholder="Organization Id" required>
+        <i class="fa-solid fa-id-badge"></i>
+      </div>
+      <div class="input-box">
+        <input type="text" id="total_distance" name="total_distance" placeholder="total Distance" required>
+        <i class="fa-solid fa-route"></i>
+      </div>
+      <div class="input-box">   
+        <select name="item_type" id="item_type" name="item_type" required>
+          <option value="">Select item type</option>    
+          <option value="1">Perishable</option>
+          <option value="2">Non-perishable</option>
+        </select>
+        <i class="fa-solid fa-cart-shopping"></i>
+      </div>
+      <button type="submit" class="btn">submit</button>
+    </form>
+  </div>
+</body>
+</html>

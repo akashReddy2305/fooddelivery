@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Food Delivery App</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'input1.css'%}">
+    <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css' rel='stylesheet'>
+
+</head>
+<body>
+  <div class="wrapper">
+    <h1>
+      <img src="https://cdn-icons-png.flaticon.com/512/3570/3570168.png" alt="Delivery Icon" class="delivery-icon">
+      Food Delivery
+    </h1>
+    {% if total_price %}
+    <div class="input-box">
+      <p>Total Price: {{ total_price }}</p>
+    </div>
+    {% else %}
+    <div class="input-box">
+        <script>
+            window.alert("Invalid Data")
+        </script>
+      <p>Total Price is not available.</p>
+    </div>
+    {% endif %}
+  </div>
+</body>
+</html>
